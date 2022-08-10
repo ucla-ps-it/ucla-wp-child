@@ -4,16 +4,16 @@ add_action("after_setup_theme", "ucla_ps_setup");
 
 function ucla_ps_setup()
 {
-  remove_theme_support( 'core-block-patterns' );
-  add_theme_support("title-tag");
-  add_theme_support("automatic-feed-links");
-  add_theme_support("post-thumbnails");
-  add_theme_support("html5", ["search-form"]);
-  add_theme_support("responsive-embeds");
-  add_theme_support("editor-styles");
-  add_editor_style("style-editor.css");
-  add_theme_support("disable-custom-colors");
-  add_theme_support("editor-color-palette", [
+    remove_theme_support('core-block-patterns');
+    add_theme_support("title-tag");
+    add_theme_support("automatic-feed-links");
+    add_theme_support("post-thumbnails");
+    add_theme_support("html5", ["search-form"]);
+    add_theme_support("responsive-embeds");
+    add_theme_support("editor-styles");
+    add_editor_style("style-editor.css");
+    add_theme_support("disable-custom-colors");
+    add_theme_support("editor-color-palette", [
     [
       "name" => esc_attr__("White", "uclaTheme"),
       "slug" => "white",
@@ -66,29 +66,23 @@ function ucla_ps_setup()
     ],
   ]);
 
-  global $content_width;
-  
-  if ( ! isset( $content_width ) ) { $content_width = 1920; }
-    register_nav_menus( array(
-      'main-menu' => esc_html__( 'Main Menu', 'ucla' ),
-      'secondary-menu' => esc_html__( 'Secondary Menu', 'ucla-secondary' ),
-      'foot-menu' => esc_html__( 'Foot Menu (Menu name must be "Foot Menu")', 'ucla-foot' )
+    global $content_width;
+
+    if (! isset($content_width)) {
+        $content_width = 1920;
+    }
+    register_nav_menus(array(
+      'main-menu' => esc_html__('Main Menu', 'ucla'),
+      'secondary-menu' => esc_html__('Secondary Menu', 'ucla-secondary'),
+      'foot-menu' => esc_html__('Foot Menu (Menu name must be "Foot Menu")', 'ucla-foot')
     ));
-  }
+}
 
 // Load Theme Scripts and Styles
 add_action("wp_enqueue_scripts", "ucla_ps_load_scripts");
-function ucla_ps_load_scripts() {
-
-  //wp_enqueue_script( 'jq', get_template_directory_uri() . '/js/jquery.min.js' );
-  //wp_enqueue_script( 'lib-script', get_template_directory_uri() . '/js/ucla-lib-scripts.min.js', array( 'jq' ), '', true );
-  //wp_enqueue_script( 'ucla-wp', get_template_directory_uri() . '/js/ucla-wp-scripts.js', array('lib-script'), '', true );
-
-  //wp_enqueue_style( 'lib-style', get_template_directory_uri() . '/css/ucla-lib.css' );  
-  //wp_enqueue_style( 'ucla-wp', get_template_directory_uri() . '/css/ucla-wp.css', [], null, "screen" );
-  wp_enqueue_style( 'ucla-ps-wp', get_template_directory_uri() . "/css/ucla-ps.min.css", [], null, "screen" );
-    
-
+function ucla_ps_load_scripts()
+{
+    wp_enqueue_style('physci-style', get_template_directory_uri() . "/css/ucla-ps.css", [ 'lib-style', 'ucla-style' ], null, "screen");
 }
 
 
@@ -114,8 +108,8 @@ add_filter("image_send_to_editor", "remove_thumbnail_dimensions", 10);
 //add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
 function remove_thumbnail_dimensions($html)
 {
-  $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
-  return $html;
+    $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
+    return $html;
 }
 
 /**
@@ -138,12 +132,12 @@ add_action("admin_bar_menu", "ucla_ps_edit_toolbar", 999);
 
 function ucla_ps_edit_toolbar($wp_toolbar)
 {
-  $wp_toolbar->remove_node("updates");
-  $wp_toolbar->remove_node("comments");
-  //$wp_toolbar->remove_node('wp-logo');
-  //$wp_toolbar->remove_node('site-name');
-  //$wp_toolbar->remove_node('new-content');
-  //$wp_toolbar->remove_node('top-secondary');
+    $wp_toolbar->remove_node("updates");
+    $wp_toolbar->remove_node("comments");
+    //$wp_toolbar->remove_node('wp-logo');
+    //$wp_toolbar->remove_node('site-name');
+    //$wp_toolbar->remove_node('new-content');
+    //$wp_toolbar->remove_node('top-secondary');
 }
 
 /**
@@ -152,18 +146,18 @@ function ucla_ps_edit_toolbar($wp_toolbar)
 add_action("admin_menu", "ucla_ps_remove_menus");
 function ucla_ps_remove_menus()
 {
-  remove_menu_page("edit-comments.php");
-  remove_menu_page("link-manager.php"); //Comments
-  //remove_menu_page( 'index.php' );                  //Dashboard
-  //remove_menu_page( 'jetpack' );                    //Jetpack*
-  //remove_menu_page( 'edit.php' );                   //Posts
-  //remove_menu_page( 'upload.php' );                 //Media
-  //remove_menu_page( 'edit.php?post_type=page' );    //Pages
-  //remove_menu_page( 'themes.php' );                 //Appearance
-  //remove_menu_page( 'plugins.php' );                //Plugins
-  //remove_menu_page( 'users.php' );                  //Users
-  //remove_menu_page( 'tools.php' );                  //Tools
-  //remove_menu_page( 'options-general.php' );        //Settings
+    remove_menu_page("edit-comments.php");
+    remove_menu_page("link-manager.php"); //Comments
+    //remove_menu_page( 'index.php' );                  //Dashboard
+    //remove_menu_page( 'jetpack' );                    //Jetpack*
+    //remove_menu_page( 'edit.php' );                   //Posts
+    //remove_menu_page( 'upload.php' );                 //Media
+    //remove_menu_page( 'edit.php?post_type=page' );    //Pages
+    //remove_menu_page( 'themes.php' );                 //Appearance
+    //remove_menu_page( 'plugins.php' );                //Plugins
+    //remove_menu_page( 'users.php' );                  //Users
+    //remove_menu_page( 'tools.php' );                  //Tools
+    //remove_menu_page( 'options-general.php' );        //Settings
 }
 
 /* Tracking script for Gauges Analytics https://secure.gaug.es/ */
@@ -171,7 +165,7 @@ function ucla_ps_remove_menus()
 // add_action('wp_footer', 'add_gauges_analytics_tracking_code');
 function add_gauges_analytics_tracking_code()
 {
-  ?>
+    ?>
 <script type="text/javascript">
 var _gauges = _gauges || [];
 (function() {
@@ -195,63 +189,63 @@ s.parentNode.insertBefore(t, s);
 
 function custom_datetime_object($field_name)
 {
-  $date = new DateTime($field_name);
-  echo $date->format("Ymd");
+    $date = new DateTime($field_name);
+    echo $date->format("Ymd");
 }
 
 function custom_unixtimestamp($field_name)
 {
-  $date = new DateTime($field_name);
-  echo $date->format("d.m.Y H:i:s");
+    $date = new DateTime($field_name);
+    echo $date->format("d.m.Y H:i:s");
 }
 
 function custom_html_datetime($field_name)
 {
-  $date = new DateTime($field_name);
-  echo $date->format("Y-m-d H:i");
+    $date = new DateTime($field_name);
+    echo $date->format("Y-m-d H:i");
 }
 
 function custom_html_date($field_name)
 {
-  $date = new DateTime($field_name);
-  echo $date->format("Y-m-d");
+    $date = new DateTime($field_name);
+    echo $date->format("Y-m-d");
 }
 
 function custom_html_time($field_name)
 {
-  $date = new DateTime($field_name);
-  echo $date->format("H:i");
+    $date = new DateTime($field_name);
+    echo $date->format("H:i");
 }
 
 function custom_year($field_name)
 {
-  $date = new DateTime($field_name);
-  echo $date->format("Y");
+    $date = new DateTime($field_name);
+    echo $date->format("Y");
 }
 
 function custom_public_date($field_name)
 {
-  $date = new DateTime($field_name);
-  echo $date->format("F j, Y");
+    $date = new DateTime($field_name);
+    echo $date->format("F j, Y");
 }
 
 function custom_public_datetime($field_name)
 {
-  $date = new DateTime($field_name);
-  echo $date->format("F j, Y, g:i a");
+    $date = new DateTime($field_name);
+    echo $date->format("F j, Y, g:i a");
 }
 
 function custom_public_time($field_name)
 {
-  $date = new DateTime($field_name);
-  echo $date->format("g:i a");
+    $date = new DateTime($field_name);
+    echo $date->format("g:i a");
 }
 
 function custom_public_date_format($field_name, $format)
 {
-  //$format = ('l, F j, Y, g:i a');
-  $date = new DateTime($field_name);
-  echo $date->format($format);
+    //$format = ('l, F j, Y, g:i a');
+    $date = new DateTime($field_name);
+    echo $date->format($format);
 }
 
 // Dashboard Widgets
@@ -260,6 +254,6 @@ function custom_public_date_format($field_name, $format)
 add_action("wp_dashboard_setup", "remove_dashboard_widgets");
 function remove_dashboard_widgets()
 {
-  remove_meta_box("dashboard_primary", "dashboard", "side");
-  remove_meta_box("dashboard_secondary", "dashboard", "side");
+    remove_meta_box("dashboard_primary", "dashboard", "side");
+    remove_meta_box("dashboard_secondary", "dashboard", "side");
 }
