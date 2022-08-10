@@ -14,7 +14,7 @@ $foot_signature = get_option('logo');
 
         <address>
           <?php
-          // get the footer address from theme options
+          // get the footer heading from theme options
           if (myprefix_get_theme_option('address_heading') !== NULL) {
             $address_heading = myprefix_get_theme_option('address_heading');
             echo '<p class="p-org">'  . $address_heading . '</p>';
