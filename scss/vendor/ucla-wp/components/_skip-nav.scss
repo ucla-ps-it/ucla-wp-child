@@ -1,0 +1,63 @@
+/*******
+Skip Navigation necessary on every page of the site and should go above the header in your page template.
+
+1. The href attribute should contain the ID name of the area you would like to skip to, preceeded by the "#" symbol.
+
+<div id="skip-nav" class="skip-nav" role="navigation" aria-label="Skip navigation">
+  <a class="button" href="#main-content">Skip to Main Content</a>
+	<a class="button" href="#footer">Skip to Footer Links</a>
+</div>
+*******/
+
+.skip-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 5px;
+  z-index: 500;
+
+  &__desktop-search,
+  &__desktop-nav {
+    display: none;
+  }
+
+  .button {
+    position: absolute;
+    left: -300px;
+    top: -300px;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    color: $default-state;
+    text-decoration: underline;
+    display: none;
+
+    @media (min-width: breakpoint-min(lg)) {
+      display: block;
+    }
+
+    &:hover {
+      color: $default-state;
+    }
+
+    &:focus {
+      position: absolute;
+      outline: 1;
+      left: 0;
+      top: 0;
+      padding: 8px;
+      width: 200px;
+      overflow: visible;
+      background-color: $white;
+      border: 1px dotted $black;
+    }
+
+    &.mobile {
+      display: block;
+
+      @media (min-width: breakpoint-min(lg)) {
+        display: none;
+      }
+    }
+  }
+}

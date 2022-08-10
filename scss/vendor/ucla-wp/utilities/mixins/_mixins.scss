@@ -1,0 +1,53 @@
+/* Mixin helpers go here */
+@mixin fluid-blade() {
+  &--grey-40,
+  &--lightest-grey-2,
+  &--light-grey,
+  &--ucla-blue,
+  &--white {
+    // margin-left: 50%;
+    // transform: translateX(-50%);
+    // display: block;
+    // position: relative;
+    // margin: 0;
+    // padding: 0;
+    // left: -5px;
+
+
+    // @media (min-width: 1200px) {
+    //   left: 0;
+    // }
+
+    // @media (min-width: 1223px) {
+    //   left: -4px;
+    // }
+
+    // @media (min-width: breakpoint-min(sm)) {
+    //   left: -5px;
+    // }
+  }
+}
+
+@mixin fluid-blade-two() {
+  @include fluid-blade();
+
+  &--grey-40 {
+    background: $grey-40;
+  }
+
+  &--lightest-grey-2 {
+    background: $lightest-grey-2;
+  }
+
+  &--light-grey {
+    background: $light-grey;
+  }
+
+  &--ucla-blue {
+    background: $ucla-blue;
+  }
+
+  &--white {
+    background: $white;
+  }
+}

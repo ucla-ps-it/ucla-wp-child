@@ -1,0 +1,66 @@
+// =====================================================
+//   HTML Living Standard
+//   Tablular data elements
+//   https://html.spec.whatwg.org/multipage/tables.html
+//   table, caption, colgroup, col, tbody, tfoot, tr, td, th
+// =====================================================
+
+table {
+margin: var(--spacing-medium) 0;
+width: 100%;
+background-color: transparent;
+border-collapse: collapse;
+font-family: inherit;
+}
+
+th,
+td {
+padding: var(--spacing-small) var(--spacing-medium) var(--spacing-small) 0;
+font-size: var(--font-clamp-small);
+text-align: left;
+vertical-align: middle;
+}
+
+th {
+font-family: var(--font-family-serif);
+font-weight: var(--font-weight-bold);
+white-space: nowrap;
+}
+
+td:first-of-type {
+padding-left: var(--spacing-x-small);
+}
+
+thead th,
+thead td {
+border-bottom: var(--border-width-hairline) solid var(--color-border);
+}
+
+tbody th,
+tbody td {
+border-bottom: var(--border-width-hairline) solid var(--color-border);
+}
+
+tbody tr:last-of-type th,
+tbody tr:last-of-type td {
+border-bottom-width: 0;
+}
+
+/* Condensed tables (Critical: All) */
+
+.table--condensed th,
+.table--condensed td {
+padding-top: var(--spacing-x-small);
+padding-bottom: var(--spacing-x-small);
+}
+
+/* Responsive tables (Critical: All) */
+
+.table--responsive {
+display: inline-block;
+max-width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+vertical-align: top;
+border-spacing: 0;
+}

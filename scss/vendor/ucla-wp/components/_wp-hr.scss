@@ -1,0 +1,29 @@
+// This style sheet overrides the gutenberg core block "Seperator".
+.wp-block-separator {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+  margin: 1em 0;
+  padding: 0;
+
+  &.fluid {
+    display: block;
+    // position: absolute;
+    // z-index: 4;
+    width: 100vh;
+    // left: 19px;
+
+    // @media (min-width: 1200px) {
+    //   left: 0;
+    // }
+
+    // @media (min-width: 1223px) {
+    //   left: -4px;
+    // }
+
+    // @media (min-width: breakpoint-min(lg)) {
+    //   left: 7px;
+    // }
+  }
+}

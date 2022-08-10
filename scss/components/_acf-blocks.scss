@@ -1,0 +1,17 @@
+.c-section-block {
+  max-width: var(--max-width);
+  margin: var(--spacing-large) auto;
+}
+
+.c-section-block-heading {
+  background-color: var(--ucla-gold);
+  max-width: fit-content;
+  vertical-align: middle;
+  height: auto;
+  padding: var(--spacing-small);  
+}
+
+.c-text {
+  max-width: var(--max-width);
+  margin: var(--spacing-large) auto;
+}

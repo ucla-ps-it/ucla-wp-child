@@ -1,0 +1,60 @@
+//  =====================================================
+//  HTML Living Standard
+//  Sections elements
+//  https://html.spec.whatwg.org/multipage/sections.html
+//  body, article, section, nav, aside, hgroup, header, footer, address
+//  ======================================================
+
+// body {
+//   // margin: 0;
+//   // padding: 0;
+//   // min-height: 100vh;
+//   // background-color: var(--color-background);
+//   // color: var(--color-text-default);
+//   // font-family: var(--font-family-default);
+//   // font-weight: var(--font-weight-default);
+//   // line-height: var(--line-height-text);
+// }
+
+body {
+  min-height: 100vh;
+}
+
+/* Article (Critical: All) */
+article {
+  margin-bottom: var(--spacing-default);
+}
+
+/* header */
+
+
+address p {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+address .p-org {
+  font-weight: bold;
+  font-size: var(--font-size-medium);
+}
+
+// footer[role="contentinfo"]{
+//   max-width: var(--max-width);
+//   margin: var(--spacing-large) auto;
+// }
+
+.site-name {
+  color: black;
+  margin-top: 1em;
+  @media (min-width: $mq-md) {
+    margin-top: 1em;
+  }
+}
+
+.site-name a,
+.site-name a:hover,
+.site-name a:active,
+.site-name a:visited
+ {
+  color: black !important;
+}

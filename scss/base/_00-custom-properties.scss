@@ -1,0 +1,252 @@
+/* Standard CSS custom properties ((Critical: All) */
+// font sizing at 16px;
+// h1 36px 2.25rem; line-height: 40.5px;
+// h2 28px 1.75rem; line-height: 32px;
+// h3 24px 1.5rem; line-height: 27px;
+// h4 20px 1.25rem;  line-height: 22.5px;
+// h5 16px 1rem  line-height: 20px;
+// h6 12.8px 0.8rem  line-height: 16px;
+// p 16px 1rem   line-height: 24px;
+// small 12.8px 0.8rem;  line-height: 16px;
+// 12px 0.75rem
+
+// .lead 1.5rem line-height: 2rem;
+// .body-copy-small font-size: 0.75rem; line-height: 1.125rem;
+
+// min-width: 768px font sizing increases
+
+// h1 48px 3rem; line-height: 54px;
+// h2 36px 2.25rem;  line-height: 40.5px;
+// line height = font size * 1.4/140% or 1.8/180%
+// 
+
+
+:root {
+  /* Typography */
+  --font-family-default: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  --font-size-display: 2.25rem; //36px
+  --font-size-x-large: 1.75rem; //28px
+  --font-size-large: 1.5rem; //24px
+  --font-size-medium: 1.25rem; //20px
+  --font-size-default: 1rem; //16px
+  --font-size-small: 0.8rem; //12.8px
+  --font-size-x-small: 0.75rem; //12px
+
+  --font-weight-default: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-text: 1.3;
+  --line-height-heading: 1.2;
+  --line-height-alt: 1;
+
+  /* Colour */
+  --ucla-gold: #ffd100;
+  --ucla-blue: #2774ae;
+  --ucla-lightest-blue: #daebfe;
+  --ucla-lighter-blue: #8bb8e8;
+  --ucla-darker-blue: #005587;
+  --ucla-darkest-blue: #003b5c;
+  --ucla-darker-gold: #ffc72c;
+  --ucla-darkest-gold: #ffb81c;
+  --ucla-cyan: #0ff;
+  --ucla-magenta: #ff00a5;
+  --ucla-green: #00ff87;
+  --ucla-janss-steps-green: #32aa56;
+  --ucla-yellow: #ff0;
+  --ucla-purple: #8a69d4;
+  --ucla-black: #000;
+  --ucla-black-90: #1a1a1a;
+  --ucla-black-80: #333;
+  --ucla-black-70: #4d4d4d;
+  --ucla-black-60: #666;
+  --ucla-black-50: #808080;
+  --ucla-black-40: #999;
+  --ucla-black-30: #b3b3b3;
+  --ucla-black-20: #ccc;
+  --ucla-black-10: #e6e6e6;
+  --ucla-white: #fff;
+
+
+  --color-background: #f9f8f8; //* #f5f5f3*/
+  --color-background-selection: #c2bfba;
+  // --color-base: #f3f2f1;
+  // --color-border: #fff;
+  // --color-brand: #a62339;
+  // --color-mid: #8c8c8c;
+  // --color-dark: #44413c;
+  // --color-logomark: #519514;
+  // --color-logotype: #292724;
+  // --color-theme: #86b543;
+  // --color-text-default: #292724;
+  --color-text-link: var(--color-theme);
+  --color-text-link-visited: var(--color-text-link);
+  --color-text-link-hover: var(--color-text-link);
+  --color-text-link-active: var(--color-text-link);
+  --color-text-link-focus: var(--color-text-link);
+  --color-text-link-underline: var(--color-text-link);
+
+
+  // PRIMARY COLORS
+  --ucla-blue: #2774ae;
+  --ucla-gold: #ffd100;
+  --white: #fff;
+
+  // SECONDARY COLORS
+  --darker-blue: #005587;
+  --darkest-blue: #003b5c;
+
+  // SECONDARY COLORS - DEPRECATED FROM BRAND GUIDELINES
+  --lightest-blue: #daebfe;
+  --light-blue: #2ba1fb;
+  --lighter-blue: #8bb8e8;
+  --lightest-gold: #fff0a5;
+  --lighter-gold: #ffdf42;
+  --darker-gold: #ffc72c;
+  --darkest-gold: #ffb81c;
+
+  // TERTIARY COLORS - DEPRECATED FROM BRAND GUIDELINES
+  --yellow: #ff0;
+  --green: #00ff87;
+  --magenta: #ff00a5;
+  --cyan: #0ff;
+  --purple: #8237ff;
+  --black: #000;
+  --cmyk-yellow: #ffea00;
+  --cmyk-green: #35b558;
+  --cmyk-magenta: #ec008c;
+  --cmyk-cyan: #20c4f4;
+  --cmyk-purple: #6658a6;
+  --cmyk-black: #23191c;
+
+  // GREYS
+  --grey-5: #f2f2f2;
+  --grey-10: #e5e5e5;
+  --grey-40: #999;
+  --grey-60: #666;
+  --grey-80: #333;
+
+  // TEXT COLORS FROM BRAND GUIDELINES
+  --grey: #333;
+  --lightest-grey-2: #ebebeb;
+  --light-grey: #e7e7e8;
+  --dark-grey: #262626;
+  --lightest-grey: #757575;
+  --lighter-grey: #454545;
+  --medium-grey: #424242;
+  --medium-grey2: #525252;
+  --medium-grey3: #ccc;
+  --medium-grey4: #666;
+  --medium-grey5: #333;
+
+  // LINK STATE COLORS
+  --default-state: #00598c;
+  --hover-state: #0079bf;
+  --active-state: #003b5c;
+  --focus-state: #0079bf;
+  --disabled-state: #757575;
+  --visited-state: #5223b0;
+
+  // lINK STATE COLORS DARK THEME
+  --default-state-dark: #ffd100;
+  --hover-state-dark: #ffe500;
+  --active-state-dark: #ffbf0f;
+  --focus-state-dark: #ffe500;
+  --disabled-state-dark: ##e5e5e5;
+  --visited-state-dark: #cfc3f3;
+
+  // DENOTIVE COLORS
+  --error-red: #d60000;
+  --error-red-20: #f7cccc;
+  --success-green: #007339;
+  --success-green-20: #cce3d7;
+  --warning-orange: #f57f17;
+  --warning-orange-20: #fde5d1;
+  --primary-alert-blue: #8bb8e8;
+  --primary-alert-blue-20: #e8f1fa;
+  --secondary-alert-grey: #999;
+  --secondary-alert-grey-10: ##e5e5e5;
+
+  // BUTTON COLORS
+  --button-hover: #fe0;
+  --button-active: #ffbf0f;
+
+  // OPAQUE COLORS
+  --default-blue-opaque: rgb(0 89 140 / 85%);
+  --default-blue-opaque-hover: rgb(0 121 191 / 85%);
+
+  // Emergency Colors
+  --emergency-bg: #f7cccc;
+  --emergency-bg-light: #e5e5e5;
+  --emergency-border: #d60000;
+
+
+  /* Borders */
+  --border-width-hairline: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-thick: 2px;
+  --border-radius: 0.25rem; // equivalent to 4px
+
+  /* Layout */
+  --grid-column-gap: 2vw;
+  --gap: 1.5rem;
+  --grid-row-gap: 2vh;
+  --max-width: 74rem;
+
+  /* Spacing */
+  --spacing-small: 0.5rem;
+  --spacing-default: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 3rem;
+
+  --duration-immediately: 0.1s;
+  --duration-instantly: 0;
+  --duration-promptly: 0.5s;
+  --duration-quickly: 0.2s;
+  --duration-slowly: 1s;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--darkest-blue);
+    --color-background-selection: #f5f5f3;
+    --color-base: #f3f2f1;
+    --color-border: #c2bfba;
+    --color-logomark: var(--ucla-blue);
+    --color-logotype: #fff;
+    --color-text-default: #fff;
+  }
+
+  [data-theme="ucla-dark"] {
+    --color-theme: #00598c;
+  }
+
+  [data-theme="ucla-light"] {
+    --color-theme: #00598c;
+  }
+
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+::-moz-selection {
+  background-color: var(--color-background-selection);
+  text-shadow: none;
+}
+
+::selection {
+  background-color: var(--color-background-selection);
+  text-shadow: none;
+}

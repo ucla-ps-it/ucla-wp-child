@@ -1,0 +1,114 @@
+//  =====================================================
+//  HTML Living Standard
+//  Grouping content elements
+//  https://html.spec.whatwg.org/multipage/grouping-content.html
+//  p, hr, pre, blockquote, ol, ul, menu, li, dl, dt, dd,
+//  figure, figcaption, main, div
+//  =====================================================
+
+// p + p {
+//   margin-bottom: var(--spacing-small);
+// }
+
+// p + h2 {
+//   margin-top: var(--spacing-medium);
+// }
+
+// p + p:not([class]) {
+// text-indent: 2ch;
+// }
+
+
+
+// p:last-child:only-child {
+//   margin-bottom: 0;
+// }
+
+/* Improve dark mode readability (Critical: All) */
+
+@media (prefers-color-scheme: dark) {
+  p {
+    word-spacing: 0.05em;
+  }
+}
+
+/* Rules (Critical: All) */
+
+hr {
+  border: 0;
+  border-bottom: var(--border-width-thin) solid var(--color-border);
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: var(--spacing-default) 0;
+  padding: 0;
+}
+
+hr.alt--large {
+  margin: var(--spacing-large) 0;
+}
+
+hr.alt--spacer {
+  margin: var(--spacing-small) 0;
+  border-bottom-width: 0;
+}
+
+/* Block quotes (Critical: All) */
+
+blockquote {
+  margin: var(--spacing-default) 0;
+  padding: 0;
+}
+
+blockquote p {
+  font-size: var(--font-size-large);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+blockquote p + p.secondary {
+  font-size: var(--font-size-default);
+  margin-top: 0;
+}
+
+blockquote cite {
+  display: block;
+  padding-top: var(--spacing-default);
+  font-size: var(--font-size-small);
+}
+
+
+/* Lists (Critical: All) */
+
+ol,
+ul {
+  margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  margin-left: 0;
+  padding-left: 0;
+  font-size: var(--font-clamp-default);
+}
+
+ul {
+  list-style-type: none;
+}
+
+ol li {
+  margin-bottom: var(--spacing-small);
+  line-height: var(--line-height-text);
+}
+
+
+
+/* Figures (Critical: All) */
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  font-size: var(--font-size-small);
+}

@@ -1,0 +1,30 @@
+//  =====================================================
+//  HTML Living Standard
+//  Embedded content elements
+//  https://html.spec.whatwg.org/multipage/embedded-content.html
+//  picture, source, img, iframe, embed, object, param, video, audio, track, map, area, svg
+//  =====================================================
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+// img {
+//   border-width: 0;
+//   content-visibility: auto;
+//   max-width: 100%;
+//   vertical-align: middle;
+//   width: 100%;
+// }
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+img.img-circle {
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+}

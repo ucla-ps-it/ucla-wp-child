@@ -1,0 +1,32 @@
+// Color Pallete background and text colors specfically for wordpress.
+// https://davidwolfpaw.com/setting-up-a-custom-palette-in-gutenberg/#comment-8468
+// Color names are created to on the functions.php
+$theme-colors: ("white": $white,
+"grey-10": $grey-10,
+"grey-40": $grey-40,
+"grey-60": $grey-60,
+"grey-80": $grey-80,
+"black": $black,
+"blue": $ucla-blue,
+"gold": $ucla-gold,
+"darkest-blue": $darkest-blue,
+"darker-blue": $darker-blue,
+);
+
+@mixin gen-props($prefix, $postfix, $property) {
+
+  @each $color-name,
+  $color in $theme-colors {
+    .#{$prefix}-#{$color-name}-#{$postfix} {
+      #{$property}: $color
+    }
+  }
+}
+
+// Generate PARENT level of text and background color
+@include gen-props('has', 'color', 'color');
+@include gen-props('has', 'background-color', 'background');
+
+// Generate CHILD level of text and background colors
+@include gen-props('has-has', 'color', 'color');
+@include gen-props('has-has', 'background-color', 'background');

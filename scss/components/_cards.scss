@@ -1,0 +1,98 @@
+/* Cards  ((Critical: All) */
+
+
+.c-school-card-stack {
+  width: 100%;
+  background-color: $grey-10;
+  padding: var(--spacing-medium) 0;
+  margin-bottom: var(--spacing-large);
+}
+
+.c-schoool-cards-intro {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.c-school-card-stack > article:first-of-type {
+  
+}
+
+.c-school-card-stack > article {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--grid-column-gap);
+  align-items: start;
+  margin: var(--spacing-large) auto;
+  max-width: var(--max-width);
+  background-color: $white;
+  padding: var(--spacing-default);
+}
+
+.c-school-card-content {
+  margin-top: var(--spacing-large);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+  "title ribbon"  
+  "intro intro";
+  gap: 1em;
+}
+
+.c-school-card__title {
+  grid-area: title;
+  align-self: end;
+}
+
+.c-school-card__ribbon {
+  grid-area: ribbon;
+  justify-self: end;
+  margin-right: -2em;
+  padding: var(--spacing-small);
+  width: fit-content;
+  background: $ucla-gold;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+}
+
+.school-card__info {
+  grid-area: intro;
+  margin-right: 2em;
+}
+
+
+.c-school-cards .lede {
+  max-width: 75ch;
+}
+
+.c-school-card-image {
+  margin-top: -2em;
+  align-items: start;
+}
+
+.c-school-cards > h2+p {
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height-text);
+}
+
+.c-school-card-image img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 400px;
+}
+
+
+.school-card__title h2 {
+  color: #00598C;
+  width: fit-content;
+}
+
+
+
+.story__secondary {
+  display: grid;
+  grid-column-gap: var(--grid-column-gap);
+  grid-row-gap: var(--grid-row-gap);
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+}
+
+

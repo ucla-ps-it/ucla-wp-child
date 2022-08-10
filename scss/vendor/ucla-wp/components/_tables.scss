@@ -1,0 +1,82 @@
+/* Tables css for WordPress only */
+.wp-block-table.is-style-stripes,
+.wp-block-table.stripe {
+  margin: 1em auto;
+
+  tbody {
+    th {
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $medium-grey5;
+      padding: 8px 16px;
+      word-wrap: break-word;
+      text-align: left;
+
+      &.align-right {
+        text-align: right;
+      }
+    }
+
+    & > tr:nth-child(odd),
+    & > tr:nth-child(odd) td:nth-child(1) {
+      background-color: $lightest-grey-2;
+    }
+
+    & > tr:nth-child(even),
+    & > tr:nth-child(even) td:nth-child(1) {
+      background-color: $white;
+    }
+
+    & > tr.blue-total,
+    & > tr.blue-total td:nth-child(1) {
+      background-color: $lightest-blue;
+      font-weight: bold;
+    }
+
+    & > tr.yellow-total,
+    & > tr.yellow-total td:nth-child(1) {
+      background-color: $ucla-gold;
+      font-weight: bold;
+
+      & > td {
+        border: none;
+      }
+    }
+
+    td {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      color: $grey-80;
+      padding: 8px 16px;
+      word-wrap: break-word;
+    }
+  }
+
+  tfoot {
+    & > tr.blue-total,
+    & > tr.blue-total td:nth-child(1) {
+      background-color: $lightest-blue;
+      font-weight: bold;
+    }
+
+    & > tr.yellow-total,
+    & > tr.yellow-total td:nth-child(1) {
+      background-color: $ucla-gold;
+      font-weight: bold;
+
+      & > td {
+        border: none;
+      }
+    }
+
+    td {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      color: $medium-grey5;
+      padding: 8px 16px;
+      word-wrap: break-word;
+    }
+  }
+}

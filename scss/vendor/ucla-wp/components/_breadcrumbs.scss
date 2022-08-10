@@ -1,0 +1,17 @@
+// .breadcrumb {
+//   color: $grey-60;
+//   margin-bottom: 8px;
+
+//   a {
+//     font-weight: bold;
+//     text-decoration: none;
+//   }
+// }
+
+.breadcrumb {
+  margin-bottom: 0.75rem;
+
+  > li:last-child {
+    color: $grey-60;
+  }
+}

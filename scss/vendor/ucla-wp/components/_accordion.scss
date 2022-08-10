@@ -1,0 +1,92 @@
+.accordion {
+  display: block;
+  padding: 22px 22px 5px;
+  max-width: 776px;
+
+  &-title {
+    border: 0;
+    border-top: 1px solid $grey-10;
+    width: 100%;
+    text-align: left;
+    color: $default-state;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    position: relative;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: rgba(0, 0, 0, 0);
+    padding: 20px 50px 20px 30px;
+
+    @media (min-width: breakpoint-min(lg)) {
+      height: 64px;
+      padding: 0 30px;
+    }
+
+    &.active {
+      &::after {
+        -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: 1px solid $grey-10;
+    }
+
+    &:hover {
+      background: $ucla-blue;
+      color: $white;
+      cursor: pointer;
+
+      &::after {
+        background: url(/wp-content/themes/ucla-wp/images/icons/arrow-down-white.svg);
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        right: 24px;
+        top: 15px;
+        width: 35px;
+        height: 35px;
+      }
+
+      &:focus {
+        outline: 1px dotted $white;
+        outline-offset: -6px;
+      }
+    }
+
+    &:focus {
+      outline: 1px dotted $default-state;
+      outline-offset: -6px;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      background: url(/wp-content/themes/ucla-wp/images/icons/arrow-down-defaultblue.svg);
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      right: 24px;
+      top: 15px;
+      width: 35px;
+      height: 35px;
+
+      &.flip {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-content {
+    display: none;
+    padding: 0 24px;
+
+    &.show-me {
+      display: block;
+    }
+  }
+}

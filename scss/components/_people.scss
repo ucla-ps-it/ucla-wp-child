@@ -1,0 +1,28 @@
+// Styles for people and a person
+
+
+.c-people > .h-feed {
+  display: grid;
+  column-gap: var(--grid-column-gap);
+  row-gap: var(--grid-row-gap);
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+}
+
+// overwrite ucla component library's unnecessary margin top and max widths
+.person-card:first-child, .person-card-grey:first-child {
+  margin-top: initial !important;
+}
+
+.person-card__info-wrapper, .person-card-grey__info-wrapper {
+  max-width: initial !important;
+}
+
+.person-card, .person-card-grey {
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.c-people figure {
+    margin: 0;
+    padding: 0;
+}

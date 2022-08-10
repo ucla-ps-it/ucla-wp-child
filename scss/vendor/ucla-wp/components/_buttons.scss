@@ -1,0 +1,42 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  width: fit-content;
+  width: max-content;
+
+  &.white {
+    padding: 10px 14px 6px;
+    background: $white;
+    color: $default-state !important;
+    border: 2px solid $default-state;
+    border-radius: 2px;
+
+    &:hover,
+    &:focus {
+      background: $hover-state;
+      color: $white !important;
+      border: 2px solid $hover-state;
+    }
+
+    &:focus {
+      outline: 1px dotted #212121;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    &:active {
+      background: $active-state;
+      color: $white !important;
+      border: 2px solid $active-state;
+    }
+
+    &:disabled {
+      color: $disabled-state !important;
+      border: 2px solid $disabled-state;
+
+      &:hover {
+        background: $white;
+        cursor: default;
+      }
+    }
+  }
+}

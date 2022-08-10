@@ -1,0 +1,67 @@
+// .acf-blocks-container > * {
+//   max-width: var(--max-width);
+//   margin: var(--spacing-large) auto;
+// }
+
+.entry-content,
+.c-people {
+  max-width: var(--max-width);
+  margin: var(--spacing-large) var(--spacing-small);
+}
+
+@media (min-width: $mq-md){
+ 
+ .entry-content,
+ .c-people {
+   max-width: var(--max-width);
+   margin: var(--spacing-large) auto;
+ }
+}
+
+main > header {
+  max-width: var(--max-width);
+  margin: var(--spacing-large) auto;
+}
+
+// .page-id-882 main > article {
+//   max-width: initial;
+//   margin: var(--spacing-large) auto;
+// }
+
+// .page-id-882 .c-school-card-stack {
+//   max-width: var(--max-width);
+//   margin: var(--spacing-large) auto;
+//   background-color: white;
+// }
+
+// main > article > header {
+//   max-width: var(--max-width);
+//   margin: var(--spacing-large) auto;
+// }
+
+[class*="single"] > article,
+[class*="archive"] > main,
+[class*="archive"] > article {
+  max-width: var(--max-width);
+  margin: var(--spacing-large) var(--spacing-small);
+}
+
+@media (min-width: $mq-md){
+ 
+ [class*="single"] > article,
+ [class*="archive"] > main,
+ [class*="archive"] > article  {
+   margin: var(--spacing-large) auto;
+ }
+}
+
+
+
+.ucla-ps-columns {
+  column-width: 18em;
+}
+
+
+
+
+

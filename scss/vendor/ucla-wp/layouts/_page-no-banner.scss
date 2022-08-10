@@ -1,0 +1,9 @@
+.ucla.campus {
+  &.entry-content {
+    padding-bottom: 3rem;
+
+    & > div > *:not(.fluid):not(.post-info):first-child {
+      padding-top: 2rem;
+    }
+  }
+}

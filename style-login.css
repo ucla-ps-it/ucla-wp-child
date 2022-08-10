@@ -1,0 +1,21 @@
+/****** Login Stylesheet
+ This stylesheet is to add some style to WordPress admin login.
+************************************/
+
+
+body.login div#login h1 {
+  margin-bottom: 2em;
+}
+
+body.login div#login h1 a {
+  background-image: url(./images/ucla-ps-logo.svg);
+  background-size: 300px;
+  background-position: center;
+  width: 300px;
+  height: 44px;
+  margin: 0 auto 1em;
+}
+
+
+
+

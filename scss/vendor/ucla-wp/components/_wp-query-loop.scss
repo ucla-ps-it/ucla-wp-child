@@ -1,0 +1,56 @@
+// This style sheet overrides the gutenberg core block "Query Loop".
+.wp-block-query {
+  .wp-block-post {
+    margin-bottom: 2rem;
+  }
+
+  .wp-block-post-title {
+    margin-bottom: 1rem;
+  }
+
+  .wp-block-post-excerpt__excerpt {
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+  }
+
+  time {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: $medium-grey4;
+  }
+
+  a.wp-block-post-excerpt__more-link:visited {
+    &:hover {
+      color: $white !important;
+    }
+  }
+}
+
+// Styles for /templates/entry-content.php
+
+.article-loop {
+  border-bottom: 1px solid $grey-10;
+  padding: 2rem 0;
+
+  time {
+    display: block;
+    color: $grey-60;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    padding-bottom: 0;
+  }
+
+  &:first-child {
+    margin-top: 2rem;
+    border-top: 1px solid $grey-10;
+  }
+}

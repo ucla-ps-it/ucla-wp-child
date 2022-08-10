@@ -1,0 +1,19 @@
+.tagcloud {
+  .tag-cloud-link {
+    border: 2px solid $default-state;
+    border-radius: 18px;
+    font-size: 12px !important;
+    line-height: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2px 10px;
+    width: fit-content;
+    width: max-content;
+    display: inline-block;
+    margin-bottom: 3px;
+
+    &:hover {
+      border: 2px solid $hover-state;
+    }
+  }
+}

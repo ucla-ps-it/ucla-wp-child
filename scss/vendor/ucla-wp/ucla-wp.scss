@@ -1,0 +1,49 @@
+/* UCLA Stratcomm WordPress Parent Theme */
+// Add more stylesheets here. Use @imports to bring in style sheets per element.
+// Any stylesheets overriding WordPress specific classes should start with "wp-".
+
+// Utilities
+@import "./utilities/_variables";
+@import "./utilities/_colors";
+@import "./utilities/mixins/_backgrounds";
+@import "./utilities/mixins/_breakpoints";
+@import "./utilities/mixins/_mixins";
+@import "./utilities/_spacing";
+// @import "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "./common/_common";
+
+// WordPress Gutenberg Core Overrides
+@import "./common/_wp-gutenberg";
+
+// WordPress Gutenberg Core BLOCK Overrides
+@import "./components/_wp-query-loop";
+@import "./components/_wp-hr";
+
+// Components
+//@import "./components/_accordion";
+@import "./components/_breadcrumbs";
+//@import "./components/_buttons";
+@import "./components/_custom-template-header";
+@import "./components/_custom-template-header-three";
+//@import "./components/_entry-content";
+@import "./components/_footer";
+@import "./components/_front-page-one-header";
+//@import "./components/_hamburger";
+@import "./components/_header";
+@import "./components/_page-header";
+//@import "./components/_pagination";
+@import "./components/_primary-nav";
+@import "./components/_search";
+@import "./components/_sidebar";
+//@import "./components/_side-menu";
+@import "./components/_skip-nav";
+@import "./components/_social-icons";
+//@import "./components/_tables";
+//@import "./components/_tag-cloud";
+
+// Layouts
+// @import "./layouts/_404";
+//@import "./layouts/_home";
+@import "./layouts/_page-no-banner";
+//@import "./layouts/_page-template-default";
+//@import "./layouts/_page-single-col";

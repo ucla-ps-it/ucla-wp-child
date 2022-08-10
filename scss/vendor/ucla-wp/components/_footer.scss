@@ -1,0 +1,276 @@
+.foot {
+  font-size: 14px;
+
+  // This is the $ucla-blue background section of the footer with the signature logo.
+  &-upper {
+    padding: 32px 24px;
+    background: $ucla-blue;
+    color: $white;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    height: fit-content;
+    height: max-content;
+
+    @media (min-width: breakpoint-min(lg)) {
+      padding-bottom: 32px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        background: #ffe500;
+        color: #333;
+      }
+
+      &:focus {
+        outline-color: white;
+      }
+    }
+
+    &-wrap {
+      display: block;
+      max-width: 1176px;
+      margin: 0 auto;
+    }
+
+    &_address {
+      padding: 0;
+      max-width: 240px;
+      margin-right: 12%;
+
+      p {
+        color: $white;
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      @media (min-width: breakpoint-min(md)) {
+        display: inline-block;
+        position: relative;
+        width: 50%;
+      }
+
+      @media (min-width: breakpoint-min(lg)) {
+        width: 30%;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 32px;
+      }
+
+      // This target the direct sibling list of .foot-upper_address. The social media icons
+      & + ul {
+        display: block;
+        padding: 0 0 56px 0;
+
+        @media (min-width: breakpoint-min(md)) {
+          display: inline-block;
+          position: relative;
+          width: 49% !important;
+          padding: 0 0 12px 0;
+        }
+
+        @media (min-width: breakpoint-min(lg)) {
+          display: block;
+          width: 30% !important;
+          padding: 0 0 32px 0;
+        }
+
+        li {
+          float: left;
+        }
+      }
+    }
+
+    &_info-menu {
+      display: block;
+      position: relative;
+      width: 100%;
+
+      @media (min-width: breakpoint-min(lg)) {
+        display: inline-block;
+        width: 64%;
+        vertical-align: top;
+        margin-top: 95px;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      ul {
+        padding-inline-start: 0 !important;
+        display: block;
+        position: relative;
+
+        li {
+          display: inline-block;
+          vertical-align: top;
+          width: fit-content;
+          padding: 0 24px 32px 0;
+          font-size: 12px;
+          min-width: 40%;
+
+          @media (min-width: breakpoint-min(lg)) {
+            min-width: fit-content;
+          }
+
+          &::before {
+            display: none;
+          }
+
+          a {
+            &:hover {
+              background: $hover-state-dark;
+              color: $grey-80;
+            }
+
+            &:focus {
+              outline: 1px dotted $white;
+            }
+          }
+
+          //second level sub-menu start
+          ul {
+            display: block;
+            margin-top: 12px;
+
+            li {
+              display: block;
+              padding-bottom: 0;
+              margin-bottom: 0;
+
+              a {
+                font-weight: normal;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // This is the $white background section of the footer with the copyright.
+  &-lower {
+    display: block;
+    background: $white;
+    padding: 32px 24px 0 24px;
+
+    a {
+      color: $ucla-blue;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    &-wrap {
+      display: block;
+      position: relative;
+      max-width: 1176px;
+      margin: 0 auto;
+
+      @media (min-width: breakpoint-min(lg)) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    &-copyright {
+      display: block;
+      position: relative;
+      width: 100%;
+      font-size: 12.8px;
+
+      @media (min-width: breakpoint-min(md)) {
+        width: 50%;
+      }
+
+      @media (min-width: breakpoint-min(lg)) {
+        width: fit-content;
+      }
+    }
+
+    &-toc {
+      display: block;
+      position: relative;
+      width: 100%;
+
+      @media (min-width: breakpoint-min(md)) {
+        width: 50%;
+      }
+
+      @media (min-width: breakpoint-min(lg)) {
+        width: fit-content;
+      }
+
+      ul {
+        padding-inline-start: 0;
+        margin-top: 16px;
+        line-height: 16px;
+        list-style: none;
+
+        @media (min-width: breakpoint-min(md)) {
+          margin-top: 0;
+          line-height: 16px;
+        }
+
+        li {
+          // List reset
+          &::before {
+            display: none;
+          }
+
+          @media (min-width: breakpoint-min(md)) {
+            float: left;
+            padding-right: 16px;
+
+            &:last-of-type {
+              padding-right: 0;
+            }
+          }
+
+          a {
+            display: block;
+            position: relative;
+            margin-bottom: 12px;
+            width: fit-content;
+            width: max-content;
+
+            &:hover {
+              background: $ucla-blue;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    &-social {
+      display: block;
+      position: relative;
+      width: 100%;
+      max-width: 291px;
+      margin-top: 0;
+
+      @media (min-width: breakpoint-min(md)) {
+        width: 48%;
+        right: 0;
+        position: absolute;
+        top: 0;
+      }
+
+      @media (min-width: breakpoint-min(lg)) {
+        width: auto;
+        right: unset;
+        position: relative;
+        top: -15px;
+      }
+    }
+  }
+}

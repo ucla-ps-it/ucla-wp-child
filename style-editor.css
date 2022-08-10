@@ -1,0 +1,30 @@
+/****** Gutenberg Editor Stylesheet
+ This stylesheet is to add some style to the gutenberg editor in the wordpress admin for the backend user.
+************************************/
+.wp-block-group.fluid.has-background-grey-40,
+.wp-block-group.fluid.has-background-lightest-grey-2,
+.wp-block-group.fluid.has-background-light-grey,
+.wp-block-group.fluid.has-background-ucla-blue,
+.wp-block-group.fluid.has-background-white {
+  padding: 5px;
+}
+
+.wp-block-group.fluid.has-background-grey-40 {
+  background: #999;
+}
+
+.wp-block-group.fluid.has-background-lightest-grey-2 {
+  background: #ebebeb;
+}
+
+.wp-block-group.fluid.has-background-light-grey {
+  background: #e7e7e8;
+}
+
+.wp-block-group.fluid.has-background-ucla-blue {
+  background: #2774AE;
+}
+
+.wp-block-group.fluid.has-background-white {
+  background: #ffffff;
+}

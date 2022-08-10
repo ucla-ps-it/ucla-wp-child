@@ -1,0 +1,57 @@
+//  =====================================================
+//  HTML Living Standard
+//  Text-level semantics elements
+//  https://html.spec.whatwg.org/multipage/text-level-semantics.html
+//  a, em, strong, small, s, cite, q, dfn, abbr, ruby, rb, rt, rtc, rp, data, time, code, var, samp, kdb, sub, sup, i, b, u, mark, bdi, bdo, span, br, wbr
+//   =====================================================
+
+a {
+  color: $default-state;
+}
+
+a:visited {
+  color: $visited-state;
+}
+
+a:hover {
+  color: white;
+  background: $hover-state;
+}
+
+a:active {
+  color: white;
+  background: $active-state;
+}
+
+a:focus {
+  outline: 1px dotted $default-state;
+}
+
+
+/* Text styles (Critical: All) */
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+mark {
+  color: var(--color-text-default);
+  background-color: transparent;
+  border-bottom: 1px dotted var(--color-text-link);
+}
+
+small,
+figcaption {
+  font-size: var(--font-size-small);
+  font-style: normal;
+}
+
+h3 small {
+  font-weight: var(--font-weight-default);
+}

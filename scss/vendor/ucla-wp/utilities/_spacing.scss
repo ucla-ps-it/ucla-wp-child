@@ -1,0 +1,111 @@
+// Spacing
+//
+// See Bootstrap for more information: https://getbootstrap.com/docs/4.0/utilities/spacing/
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+
+$spacers: map-merge(
+  (
+    0: 0,
+    4: ($spacer * .25),  //4px
+    8: ($spacer * .5),   //8px
+    12: ($spacer * .75),   //12px
+    16: $spacer,          //16px
+    24: ($spacer * 1.5),  //24px
+    32: ($spacer * 2),   //32px
+    36: ($spacer * 2.25),   //36px
+    40: ($spacer * 2.5),  //40px
+    48: ($spacer * 3),    //48px
+    56: ($spacer * 3.625), //56px
+    64: ($spacer * 4),    //64px
+    72: ($spacer * 4.5)   //72px
+  ),
+  $spacers
+);
+
+// Margin and Padding
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		@each $prop, $abbrev in (margin: m, padding: p) {
+			@each $size, $length in $spacers {
+
+				.#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+
+				.#{$abbrev}t#{$infix}-#{$size},
+				.#{$abbrev}y#{$infix}-#{$size} {
+					#{$prop}-top: $length !important;
+        }
+
+				.#{$abbrev}r#{$infix}-#{$size},
+				.#{$abbrev}x#{$infix}-#{$size} {
+					#{$prop}-right: $length !important;
+        }
+
+				.#{$abbrev}b#{$infix}-#{$size},
+				.#{$abbrev}y#{$infix}-#{$size} {
+					#{$prop}-bottom: $length !important;
+        }
+
+				.#{$abbrev}l#{$infix}-#{$size},
+				.#{$abbrev}x#{$infix}-#{$size} {
+					#{$prop}-left: $length !important;
+        }
+			}
+		}
+
+		// Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+		@each $size, $length in $spacers {
+			@if $size != 0 {
+				.m#{$infix}-n#{$size} { margin: -$length !important; }
+
+				.mt#{$infix}-n#{$size},
+				.my#{$infix}-n#{$size} {
+					margin-top: -$length !important;
+        }
+
+				.mr#{$infix}-n#{$size},
+				.mx#{$infix}-n#{$size} {
+					margin-right: -$length !important;
+        }
+
+				.mb#{$infix}-n#{$size},
+				.my#{$infix}-n#{$size} {
+					margin-bottom: -$length !important;
+        }
+
+				.ml#{$infix}-n#{$size},
+				.mx#{$infix}-n#{$size} {
+					margin-left: -$length !important;
+        }
+      }
+    }
+
+    	// Some special margin utils
+		.m#{$infix}-auto { margin: auto !important; }
+		.mt#{$infix}-auto,
+		.my#{$infix}-auto {
+			margin-top: auto !important;
+    }
+		.mr#{$infix}-auto,
+		.mx#{$infix}-auto {
+			margin-right: auto !important;
+    }
+		.mb#{$infix}-auto,
+		.my#{$infix}-auto {
+			margin-bottom: auto !important;
+    }
+		.ml#{$infix}-auto,
+		.mx#{$infix}-auto {
+			margin-left: auto !important;
+    }
+
+	}
+}
