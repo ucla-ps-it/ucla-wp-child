@@ -110,16 +110,13 @@ $debug-outline-style: solid;
     outline: none;
   }
 
-  [style] {
-    //outline: $debug-outline $debug-outline-style $debug-color;
-  }
 
   [id] {
-    //outline: $debug-outline $debug-outline-style $debug-color;
+    outline: $debug-outline $debug-outline-style $debug-color;
   }
 
   article {
-    //outline: $debug-outline-thin $debug-outline-style $debug-color;
+    outline: $debug-outline-thin $debug-outline-style $debug-color;
   }
 
   aside,
