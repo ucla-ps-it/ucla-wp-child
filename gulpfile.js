@@ -24,9 +24,7 @@ function watchStyles (done) {
 
 function generateStyles () {
   return src([
-    'scss/**/*.scss',
-    '!scss/vendor/ucla-bruin-components/**',
-    '!scss/vendor/ucla-wp/**'
+    'scss/**/*.scss'
     ])
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'expanded' }).on('error', sass.logError))
@@ -37,9 +35,7 @@ function generateStyles () {
 
 function compressStyles () {
   return src([
-      'scss/**/*.scss',
-      '!scss/vendor/ucla-bruin-components/**',
-      '!scss/vendor/ucla-wp/**'
+      'scss/**/*.scss'
       ])
     .pipe(sourcemaps.init())
     .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -52,30 +48,30 @@ function compressStyles () {
 
 // Scripts
 
-function watchScripts (done) {
-  watch('src/js/*.js', series(generateScripts, lintScripts));
-  done();
-}
+// function watchScripts (done) {
+//   watch('src/js/*.js', series(generateScripts, lintScripts));
+//   done();
+// }
 
-function lintScripts () {
-  return src('src/js/*.js')
-    .pipe(eslint())
-    .pipe(eslint.format());
-}
+// function lintScripts () {
+//   return src('src/js/*.js')
+//     .pipe(eslint())
+//     .pipe(eslint.format());
+// }
 
-function generateScripts () {
-  return src('src/js/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(concat('ucla-ps-scripts.js'))
-    .pipe(minify({
-      ext: {
-        src: '.js',
-        min: '.min.js'
-      },
-    }))
-    .pipe(sourcemaps.write(''))
-    .pipe(dest('js'));
-}
+// function generateScripts () {
+//   return src('src/js/*.js')
+//     .pipe(sourcemaps.init())
+//     .pipe(concat('ucla-ps-scripts.js'))
+//     .pipe(minify({
+//       ext: {
+//         src: '.js',
+//         min: '.min.js'
+//       },
+//     }))
+//     .pipe(sourcemaps.write(''))
+//     .pipe(dest('js'));
+// }
 
 
 
@@ -83,11 +79,10 @@ function generateScripts () {
 
 function cleanUp () {
   return del([
-    'public/js/*',
-    'public/css/*'
+    'js/*',
+    'css/*'
   ]);
 }
-
 
 
 // gulp
@@ -95,16 +90,13 @@ exports.default = defaultTask;
 
 // gulp watch
 exports.watch = series(
-  watchScripts,
   cleanUp,
-  generateScripts,
   generateStyles
 );
 
 // gulp build
 exports.build = series(
   cleanUp,
-  generateScripts,
   generateStyles,
   compressStyles
 );
@@ -112,7 +104,6 @@ exports.build = series(
 // gulp production
 exports.production = series(
   cleanUp,
-  generateScripts,
   generateStyles,
   compressStyles
 );
