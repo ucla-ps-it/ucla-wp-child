@@ -9,7 +9,7 @@
    
 ?>
     <header>
-      <div class="breadcrumb"><?php get_breadcrumb(); ?> / News</div>
+      <?php get_breadcrumb(); ?>
       <?php if ( $page_title ) { ?>
         <h1><?php echo wp_kses_post( $page_title ); ?></h1>
       <?php } ?>

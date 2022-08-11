@@ -16,7 +16,7 @@ if (have_posts()){
     the_post(); ?>
  
     <header>
-      <p class="breadcrumb"><?php get_breadcrumb(); ?> / <?php the_title(); ?></p>
+      <?php get_breadcrumb(); ?>
       <h1><?php the_title(); ?></h1>
     </header>
       

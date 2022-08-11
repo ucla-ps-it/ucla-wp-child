@@ -25,7 +25,7 @@ get_header();
 	if ( $archive_title || $archive_subtitle ) {
 		?>
  		<header class="archive-header">
-     <div class="breadcrumb"><?php get_breadcrumb(); ?> / <?php echo wp_kses_post( post_type_archive_title( '', false ) ); ?></div>
+   	<?php get_breadcrumb(); ?>
 				<?php if ( $archive_title ) { ?>
 					<h1><?php echo wp_kses_post( post_type_archive_title( '', false ) ); ?></h1>
 				<?php } ?>

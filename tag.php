@@ -11,7 +11,7 @@ get_header(); ?>
     <header class="header">
       <div class="ucla campus">
         <div class="col span_12_of_12">
-          <p class="breadcrumb"><?php get_breadcrumb(); ?></p>
+          <?php get_breadcrumb(); ?>
           <h1 class="entry-title"><?php single_term_title(); ?></h1>
         </div>
       </div>
