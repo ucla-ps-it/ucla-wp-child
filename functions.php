@@ -82,7 +82,7 @@ function ucla_ps_setup()
 add_action("wp_enqueue_scripts", "ucla_ps_load_scripts");
 function ucla_ps_load_scripts()
 {
-    wp_enqueue_style('physci-style', get_template_directory_uri() . "/css/ucla-ps.css", [ 'lib-style', 'ucla-style' ], null, "screen");
+    wp_enqueue_style('physci-style', get_stylesheet_directory_uri() . "/css/ucla-ps.css", [ 'lib-style', 'ucla-style' ], null, "screen");
 }
 
 
